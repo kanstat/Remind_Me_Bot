@@ -15,7 +15,6 @@ def updates(offset=None):
     update = update.json()["result"]
     return update
 
-# https://api.telegram.org/bot/sendMessage?chat_id=325011602&text=Hey%20%20you%20hard%20on%20neck
 
 
 def send_msg(chatid, text):
