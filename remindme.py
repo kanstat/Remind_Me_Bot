@@ -4,7 +4,7 @@ import requests
 from datetime import datetime, time
 import time
 import threading
-
+# you have to hide your key
 bot_api = "Replace this with your api key"
 base_url = f"https://api.telegram.org/bot{bot_api}/"
 
