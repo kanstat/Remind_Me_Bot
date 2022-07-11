@@ -1,5 +1,5 @@
-# create a reminder bot.
-# get updates, grab user text, store a user text,constantly check time_1, send text.
+# a reminder bot.
+# get updates, grab user text, store a user text, constantly check time_1, send text.. (according to telegram bot API)
 import requests
 from datetime import datetime, time
 import time
@@ -23,7 +23,7 @@ def send_msg(chatid, text):
 
 
 # thread handler function
-def thread_handler(vka_msg, vid):
+def thread_handler(vka_msg, vid):  # here vka_msg can be any text to send
 
     msg, time_1 = (vka_msg).split(',')
     time_1 = time_1.replace(' ', '')
@@ -45,11 +45,9 @@ def thread_handler(vka_msg, vid):
             break
 
 
-# thread starter function
-
-
+# thread starter function (using threading in python)
 def thread_starter(vka_msg, vid):
-    dummy_thread = threading.Thread(target=thread_handler, args=(vka_msg, vid))
+    dummy_thread = threading.Thread(target=thread_handler, args=(vka_msg, vid))  # using Thread function of the imported threading module
     dummy_thread.start()
 
 
